@@ -186,16 +186,36 @@ function sumAll(array) {
 //Use array 'a' from before, expecting 23
 console.log('The sum of all numbers in the array is',sumAll(a));
 
+/**
+ * A function that returns a new array of all positive (greater than 0) numbers from an input array
+ * @param {array} array of numbers 
+ * @returns A new array with only positive numbers (greater than 0) or else returns an empty array
+ */
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
 function positiveArray(array) {
-  
+  let positive = [];
+
+  for (i=0; i<array.length; i++) {
+    if (array[i] > 0) {
+      positive.push(array[i]);
+    }
+  }
+  return positive;
 }
 
+//Sample arrays to test in function
 let z = [5, -6, 1, 4, -9, 0, 4, 10, -3];
+let n = [-5, -2, 0, -3, -9];
+
+//z array, we expect all positive numbers and no 0 in the new array
+console.log('The original array is',z,'The positive numbers in the array are',positiveArray(z));
+
+//n array, we expect an empty array as there are only negatives and 0
+console.log('The original array is',n,'We are expecting an empty array',positiveArray(n));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
