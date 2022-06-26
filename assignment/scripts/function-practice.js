@@ -220,3 +220,20 @@ console.log('The original array is',n,'We are expecting an empty array',positive
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
+/**
+ * Converts an integer in minutes and converts it to seconds
+ * @param {number} minutes - Takes an integer
+ * @returns The integer in seconds
+ */
+//Write a function that takes an integer minutes and converts it to seconds.
+
+function minutesToSeconds(minutes) {
+  let seconds = 0;
+  seconds = minutes * 60;
+  return seconds;
+}
+
+//We expect 240 seconds)
+console.log('The number of seconds is',minutesToSeconds(4));
